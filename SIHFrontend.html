@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <title>
+            Team Hawk: Frontend 
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="SIHFrontend.css">    
+    </head>
+    <body>
+        <div id="sectionLoginPage">
+            <div class="back">
+                <div class="d-flex flex-row justify-content-end">    
+                    <div class="d-flex flex-column justify-content-center details">
+                        <h1 class="login">Login</h1>
+                        <p class="input">Username</p>
+                        <p class="input">Password</p>
+                        <button class="btn btn-primary" onclick="display('sectionHomePage')">Login</button>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div id="sectionHomePage">
+            <div class="top"></div>
+            <div class="text d-flex flex-column">
+                <div class="d-flex flex-row justify-content-center">
+                    <div onclick="display('sectionMAP')">
+                        <img src="https://res.cloudinary.com/dx9id1anx/image/upload/v1695316779/Map_l5ibmz.jpg" class="image"/>
+                        <p>MAP</p>
+                    </div>
+                    <div onclick="display('sectionLIST')">
+                        <img src="https://res.cloudinary.com/dx9id1anx/image/upload/v1695316779/List_udt99x.jpg" class="image"/>
+                        <p>LIST</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div onclick="display('sectionTRACKING')">
+                        <img src="https://res.cloudinary.com/dx9id1anx/image/upload/v1695316779/Location_kkf2eb.jpg" class="image"/>
+                        <p>TRACKING</p>
+                    </div>
+                    <div onclick="display('sectionNOTIFICATION')">
+                        <img src="https://res.cloudinary.com/dx9id1anx/image/upload/v1695316779/SOS_bw68st.jpg" class="image"/>
+                        <p>NOTIFICATION</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionLoginPage')">Back</button>
+            </div>
+        </div>
+        <div id="sectionMAP">
+            <div class="top">
+                <h1 class="mm">Map</h1>
+            </div>
+            <div class="d-flex flex-row justify-content-end">
+                <div class="d-flex flex-column justify-content-center details">
+                    <button class="btn btn-primary">Search</button>
+                </div>
+            </div>
+            <img src="https://res.cloudinary.com/dx9id1anx/image/upload/v1695317976/smap_cfsqix.jpg" class="mapimage"/>
+            <div class="d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionHomePage')">Back</button>
+            </div>
+        </div>
+        <div id="sectionLIST">
+            <div class="top">
+                <h1 class="mm">Signal List</h1>
+            </div>
+            <div class="mt-2">
+                <h1 class="text-center">SEARCH FOR SIGNAL</h1>
+            </div>
+            <div class="m-4 d-flex flex-row justify-content-end">
+                <button class="btn btn-primary" onclick="display('sectionResults')">Search</button>
+            </div>
+            <div class="m-auto box">
+                <h3>SEARCH BY NAME</h3>
+            </div>
+            <div class="m-5"></div>
+            <div class="m-auto box">
+                <h3>SEARCH BY CODE</h3>
+            </div>
+            <div class="m-5"></div>
+            <div class="m-auto box">
+                <h3>SEARCH BY AREA</h3>
+            </div>
+            <div class="mt-4 d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionHomePage')">Back</button>
+            </div>
+        </div>
+        <div id="sectionResults">
+            <div class="top">
+                <h1 class="mm">Results</h1>
+            </div>
+            <div class="m-5"></div>
+            <div class="m-auto box" onclick="display('sectionResultDetailed')">
+                <h3>Result 1</h3>
+            </div>
+            <div class="m-5"></div>
+            <div class="m-auto box" onclick="display('sectionResultDetailed')">
+                <h3>Result 2</h3>
+            </div>
+            <div class="m-5"></div>
+            <div class="m-auto box" onclick="display('sectionResultDetailed')">
+                <h3>Result 3</h3>
+            </div>
+            <div class="mt-4 d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionLIST')">Back</button>
+            </div>
+        </div>
+        <div id="sectionResultDetailed">
+            <div class="top">
+                <h1 class="mm">Result Details</h1>
+            </div>
+            <div class="m-5"></div>
+            <div class="top1"></div>
+            <div class="d-flex flex-row m-5">
+                <div class="m-auto">
+                    <h3>Signal Decision</h3>
+                    <p>Lane: Right</p>
+                    <p>Time: 34s</p>
+                </div>
+                <div class="m-auto">
+                    <h3>Change The Decision:</h3>
+                    <p>Lane:</p>
+                    <div class="top2"></div>
+                    <p>Time:</p>
+                    <div class="top2"></div>
+                </div>
+            </div>
+            <div class="mt-4 d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionResults')">Back</button>
+            </div>
+        </div>
+        <div id="sectionTRACKING">
+            <div class="top">
+                <h1 class="mm">Vehicle Tracking</h1>
+            </div>
+            <div class="m-5"></div>
+            <div>
+                <h3 class="text-center btn-primary m-5">Enter Number Plate</h3>
+            </div>
+            <div class="d-flex flex-row justify-content-center track">
+            </div>
+            <div class="mt-4 d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionHomePage')">Back</button>
+            </div>
+        </div>
+        <div id="sectionNOTIFICATION">
+            <div class="top">
+                <h1 class="mm">SOS NOTIFICATIONS</h1>
+            </div>
+            <div class="m-5"></div>
+            <div class="notif">
+                <h3 class="text-center">Notification 1</h3>
+                <p>Notification Content</p>
+                <div class="d-flex flex-row justify-content-center m-5">
+                    <p>Location</p>
+                    <p>Time</p>
+                </div>
+            </div>
+            <div class="m-5"></div>
+            <div class="notif">
+                <h3 class="text-center">Notification 2</h3>
+                <p>Notification Content</p>
+                <div class="d-flex flex-row justify-content-center m-5">
+                    <p>Location</p>
+                    <p>Time</p>
+                </div>
+            </div>
+            <div class="m-5"></div>
+            <div class="notif">
+                <h3>Notification 3</h3>
+                <p>Notification Content</p>
+                <div class="d-flex flex-row justify-content-center m-5">
+                    <p>Location</p>
+                    <p>Time</p>
+                </div>
+            </div>
+            <div class="mt-4 d-flex flex-row justify-content-center">
+                <button class="btn btn-primary" onclick="display('sectionHomePage')">Back</button>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    </body>
+</html>
